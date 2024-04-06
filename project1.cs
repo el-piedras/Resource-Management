@@ -127,40 +127,45 @@ public class project1 : ModBehaviour
 	{
 		static public void ShipRefuel()
 		{
-			landingPadManager.IsLanded();
-			float fractionaryFuel = shipResources.GetFractionalFuel();
-			IsLanded = landingPadManager.IsLanded();			
-			if (IsLanded)	// Check ship's landing status
+			landingPadManager.IsLanded(); // Call's the landing check to update boolean (Failsafe)
+			float fractionaryFuel = shipResources.GetFractionalFuel(); // Get ship's fractional fuel
+			IsLanded = landingPadManager.IsLanded();	// Checks if ship is landed
+
+			//	Refueling and gauges manager
+			if (IsLanded)
 			{
 				shipResources.SetFuel(shipResources._currentFuel += RefuelAmount);	// Increase fuel when landed
 				shipFuelGauge._indicatorLight.SetEmissionColor(Color.green);	//	Turn gauge green light on when refueling
 			}
 			else if (0.0001f <= fractionaryFuel && fractionaryFuel <= 0.3f && !IsLanded)
 			{
-				shipFuelGauge._indicatorLight.SetEmissionColor(Color.yellow); // Turn on warning light
+				shipFuelGauge._indicatorLight.SetEmissionColor(Color.red); // Turn on warning light when low fuel
 			}
 			else if (shipResources != null && !IsLanded && fractionaryFuel > 0.3f && !IsLanded)
 			{ 
 				shipFuelGauge._indicatorLight.SetEmissionColor(Color.black); // Turn light off when not refueling
 			}
 
+			// Electrical systems & Refill station manager
 			if (shipResources._currentFuel <= 0)
 			{
-				playerRecoveryPoint._refuelsPlayer = false;
-				mainElectricalSystem.SetPowered(false);
+				playerRecoveryPoint._refuelsPlayer = false;	// Disables refueling when ship is out of fuel
+				mainElectricalSystem.SetPowered(false);	// Disables electrical systems when ship is out of fuel
 			}
 			else if (shipResources._currentFuel > 0 && shipFuelGauge._shipDestroyed == false)
 			{
-				playerRecoveryPoint._refuelsPlayer = true;
-				mainElectricalSystem.SetPowered(true);
+				playerRecoveryPoint._refuelsPlayer = true;	// Activates refueling station in case of refueling
+				mainElectricalSystem.SetPowered(true);	// Enables electrical system in case of refueling
 			}
 		}
 		static public void OxygenRefill()
 		{
 			bool isOxygenAvailable = shipOxygenDetector.GetDetectOxygen();	// Check oxygen availabilty
-			bool playerHasOxygenVolume = playerOxygenDetector._activeVolumes.Contains(shipOxygenVolume);
-			float fractionaryOxygen = shipResources.GetFractionalOxygen();
+			bool playerHasOxygenVolume = playerOxygenDetector._activeVolumes.Contains(shipOxygenVolume);	// Check if player has ship's OxygenVolume
+			float fractionaryOxygen = shipResources.GetFractionalOxygen();	// Get fractional oxygen
+			bool isPlayerInShip = PlayerState.IsInsideShip();	// Check if player is inside ship
 
+			// Oxygen refill & Gauge lights manager
 			if (isOxygenAvailable)
 			{
 				shipResources.SetOxygen(shipResources._currentOxygen += OxygenRefillAmount);	// Increase oxygen if it's available
@@ -168,29 +173,26 @@ public class project1 : ModBehaviour
 			}
 			else if (0.001f <= fractionaryOxygen && fractionaryOxygen <= 0.16f && !isOxygenAvailable)
 			{
-				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.red);
+				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.red);	// Turn red light on critical oxygen
 			}
 			else if (0.161 <= fractionaryOxygen && fractionaryOxygen <= 0.33f && !isOxygenAvailable)
 			{
-				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.yellow);	
+				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.yellow);	//Turn yellow light on low fuel
 			}
 			else if (!isOxygenAvailable && fractionaryOxygen > 0.33f)
 			{ 
 				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.black); // Turn light off when oxygen is not available
 			}
 
-
-			//	Remove oxygen volumes when oxygen tank is empty
-			if (shipResources._currentOxygen == 0 && playerHasOxygenVolume)
+			// OxygenVolumes manager
+			if (shipResources._currentOxygen == 0 && playerHasOxygenVolume && isPlayerInShip || !isPlayerInShip)
 			{
-				playerOxygenDetector._activeVolumes.Remove(shipOxygenVolume);
-				
+				playerOxygenDetector._activeVolumes.Remove(shipOxygenVolume); // Remove ship's OxygenVolume from player
 			}
 
-			// Add back oxygen volumes if tank refills
-			else if (shipResources._currentOxygen > 0 && !playerHasOxygenVolume)
+			else if (shipResources._currentOxygen > 0 && !playerHasOxygenVolume && isPlayerInShip)
 			{
-				playerOxygenDetector._activeVolumes.Add(shipOxygenVolume);
+				playerOxygenDetector._activeVolumes.Add(shipOxygenVolume); // Add ship's OxygenVolume to player in case of refill
 			}
 		}
 	}
