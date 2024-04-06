@@ -27,8 +27,6 @@ public class project1 : ModBehaviour
 	{
 		///	I apologize for my inexperience in coding and commenting for readability
 		///	It's my first mod, don't judge too hard :]
-		ModHelper.Console.WriteLine($"{nameof(project1)}: Resource management loaded!", MessageType.Success);
-
 		// Check the scene loaded when a scene finishes loading
 		LoadManager.OnCompleteSceneLoad += (scene, loadScene) =>
 		{
@@ -143,8 +141,8 @@ public class project1 : ModBehaviour
 			{ 
 				shipFuelGauge._indicatorLight.SetEmissionColor(Color.black); // Turn light off when not refueling
 			}
-
-			if (shipResources._currentFuel <= 0)
+			
+			if (shipResources._currentFuel <= 0) // Disable refueling when out of fuel
 			{
 				playerRecoveryPoint._refuelsPlayer = false;
 				mainElectricalSystem.SetPowered(false);
@@ -157,7 +155,7 @@ public class project1 : ModBehaviour
 		}
 		static public void OxygenRefill()
 		{
-			bool isOxygenAvailable = shipOxygenDetector.GetDetectOxygen();	// Check oxygen availabilty
+			bool isOxygenAvailable = shipOxygenDetector.GetDetectOxygen();
 			bool playerHasOxygenVolume = playerOxygenDetector._activeVolumes.Contains(shipOxygenVolume);
 			float fractionaryOxygen = shipResources.GetFractionalOxygen();
 
@@ -166,17 +164,17 @@ public class project1 : ModBehaviour
 				shipResources.SetOxygen(shipResources._currentOxygen += OxygenRefillAmount);	// Increase oxygen if it's available
 				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.green);	// Turn gauge green light on when refilling
 			}
-			else if (0.001f <= fractionaryOxygen && fractionaryOxygen <= 0.16f && !isOxygenAvailable)
+			else if (0.001f <= fractionaryOxygen && fractionaryOxygen <= 0.16f && !isOxygenAvailable)	// Light logic
 			{
 				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.red);
 			}
-			else if (0.161 <= fractionaryOxygen && fractionaryOxygen <= 0.33f && !isOxygenAvailable)
+			else if (0.161 <= fractionaryOxygen && fractionaryOxygen <= 0.33f && !isOxygenAvailable)	// More light logic
 			{
 				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.yellow);	
 			}
-			else if (!isOxygenAvailable && fractionaryOxygen > 0.33f)
+			else if (!isOxygenAvailable && fractionaryOxygen > 0.33f)	// Turn light off when oxygen is not available
 			{ 
-				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.black); // Turn light off when oxygen is not available
+				shipOxygenGauge._indicatorLight.SetEmissionColor(Color.black); 
 			}
 
 
