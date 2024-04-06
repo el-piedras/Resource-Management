@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
+  "filename": "project1.dll",
+  "author": "Stonesword",
+  "name": "Resource Management",
+  "uniqueName": "Stonesword.ResourceManagement",
+  "version": "0.1.0",
+  "owmlVersion": "2.9.8",
+  "dependencies": []
+}
