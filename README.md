@@ -19,5 +19,7 @@ Why in the world would you download this? Doesn't matter. I present to you a dir
 
  ### New light indicators
  Whenever you're running out of oxygen or fuel, a small light will appear below their gauges once their resource is low.
+ ![image](https://github.com/el-piedras/Resource-Management/assets/134638269/979c0b21-9c11-41d2-8f28-43050b3dbc10)
+
 
  That's about it for the changes, have fun.
