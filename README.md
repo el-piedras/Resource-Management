@@ -1,7 +1,9 @@
+![image](https://github.com/el-piedras/Resource-Management/assets/134638269/2ba85169-172f-4783-808c-7d607bbf24d5)
+
 # Resource Management
  ## A mod that makes the oxygen and fuel in your ship matter.
 
- This mod changes and adds a few mechanics regarding your ship's oxygen and fuel tank. The changes are the following:
+Why in the world would you download this? Doesn't matter. I present to you a direct downgrade to the vanilla ship!
 
  ### Increased fuel usage
  In Vanilla Outer Wilds, you could spend the entire loop flying around and you'd never run out of fuel! Well, that's not the case anymore, so keep an eye on that **gauge** or you might not have enough fuel to keep the lights on... Or move, for that matter.
