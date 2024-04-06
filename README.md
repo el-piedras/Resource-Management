@@ -23,3 +23,4 @@ Why in the world would you download this? Doesn't matter. I present to you a dir
 
 
  That's about it for the changes, have fun.
+ Any bugs or questions DM me in Discord (Stonesword) or report it here.
