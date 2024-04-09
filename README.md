@@ -17,8 +17,8 @@ Why in the world would you download this? Doesn't matter. I present to you a dir
  ### Oxygen tank refilling
  Slate also installed a new air compressor on your ship that will slowly refill your oxygen tank whenever it's in presence of oxygen. This will be indicated by a green light below your oxygen gauge.
 
- ### New light indicators
- Whenever you're running out of oxygen or fuel, a small light will appear below their gauges once their resource is low.
+ ### New notifications and light indicators
+ When you're running a bit low on fuel or oxygen, your ship will *beep* and give you a warning on your ship's console along with a red or yellow light below your fuel / oxygen gauge. Just make sure to check every now and then so you don't run out of oxygen while flying a bit too close to  the sun...
  ![image](https://github.com/el-piedras/Resource-Management/assets/134638269/979c0b21-9c11-41d2-8f28-43050b3dbc10)
 
 
