@@ -23,6 +23,9 @@ Why in the world would you download this? Doesn't matter. I present to you a dir
 
 
  That's about it for the changes, have fun.
+
+## Planned:
+ As for some stuff I'll add in the future, expect being able to use oxygen as fuel, increased regeneration on landing pads, and a small fix that should make regeneration more consistent across different framerates :]
  Any bugs or questions DM me in Discord (Stonesword_) or report it here.
 
-*Thanks to Xen, JohnCorby, pikpik_carrot, Etherpod and Trifid for their help and basically teaching me how to make mods.*
+*Thanks to Xen, JohnCorby, pikpik_carrot, Etherpod, iwantbread and Trifid for their help.*
