@@ -257,7 +257,7 @@ public class project1 : ModBehaviour
 
 			// Draw fuel to refill jetpack
 			bool isRefueling = playerResources.IsRefueling();
-			if (isRefueling && PlayerState.IsInsideShip())
+			if (isRefueling && PlayerState.IsInsideShip() && shipResources._currentFuel > 0f)
 			{
 				shipResources._currentFuel -= 30f;
 			}
