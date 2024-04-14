@@ -440,16 +440,3 @@ public class project1 : ModBehaviour
 		}
 	}
 }
-
-// Landing pads: More fuel & Oxygen: add to TH (DONE)
-// Use oxygen as fuel in emergency situation
-// Equalize ship's oxygen with player's if ship's is lower (DONE)
-// Rework oxygen so it uses 1f per second (DONE)
-
-///Other notes
-///Oxygen drain for player is 1f *deltatime = 1f/s
-///
-///02 drain ship =  0.13f *deltaTime = 0.13f/s
-///0.13f/s * 7.692 = ~1f/s
-///1f * 60 = 60f/m * 10 = 600f 
-///if i multiply the oxygen drain by 7.692 and round it to 1, the max capacity of the o2 tank should be 1080 for it to last 18 minutes
