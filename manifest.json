@@ -4,7 +4,7 @@
   "author": "Stonesword",
   "name": "Resource Management",
   "uniqueName": "Stonesword.ResourceManagement",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "owmlVersion": "2.9.8",
   "dependencies": []
 }

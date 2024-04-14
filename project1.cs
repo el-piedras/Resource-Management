@@ -257,7 +257,7 @@ public class project1 : ModBehaviour
 
 			// Draw fuel to refill jetpack
 			bool isRefueling = playerResources.IsRefueling();
-			if (isRefueling)
+			if (isRefueling && PlayerState.IsInsideShip())
 			{
 				shipResources._currentFuel -= 30f;
 			}
@@ -349,19 +349,6 @@ public class project1 : ModBehaviour
 			else if (shipResources._currentOxygen > 0 && !playerHasOxygenVolume && isPlayerInShip)
 			{
 				playerOxygenDetector._activeVolumes.Add(shipOxygenVolume);
-			}
-		}
-
-		static public void EmergencyThrusterController()
-		{
-			if (shipResources._currentFuel == 0)
-			{
-				bool UsingEmergencyThrusters = true;
-				
-				if (UsingEmergencyThrusters)
-				{
-					// Logic will be used here to use oxygen as fuel later on
-				}
 			}
 		}
 	}
