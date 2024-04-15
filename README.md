@@ -32,7 +32,8 @@ Thats about it for the changes. Have fun!
 
 ## Planned:
  I've heard Slate is trying to install those same emergency boosters your suit has that work on oxygen on your ship, but this is some very experimental tech that hasn't left their imagination just yet.
-
+ You'll also be able to customize certain parameters, such as max oxygen, max fuel, certain multipliers, resourse consumption and regeneration, aswell as enabling or desabling some features.
+ And just maybe I'll add some functionality to that temperature gauge, at least for cosmetic purposes.
  
 *Any bugs, questions, or suggestions are appreciated and you can contact me on Discord (stonesword_) or leave a comment*
-*Thanks to Xen, JohnCorby, pikpik_carrot, Etherpod, iwantbread and Trifid, viovayo and the Outer Wilds Modding server for their enormous help with this project!*
+*Thanks to Xen, JohnCorby, pikpik_carrot, Etherpod, iwantbread, Trifid, viovayo, and the entire Outer Wilds Modding server for their enormous help with this project!*
