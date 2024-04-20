@@ -1,4 +1,57 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
-  "enabled": true
-}
+	"$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
+	"enabled": true,
+	"settings": {
+		"Enable Oxygen Refill":	{
+		  "type": "toggle",
+		  "value": true,
+		  "tooltip": "Should oxygen refill when in an oxygenated place? (Default: true)"
+		},
+		"Max Oxygen": {
+		  "type": "number",
+		  "value": 1080,
+		  "tooltip": "Oxygen consumption is 1 unit per second. (Default: 1080)"
+		},
+		"Oxygen Regeneration Rate": {
+		  "type": "number",
+		  "value": 4,
+		  "tooltip": "Oxygen units regenerated per frame. (Default: 4)"
+		},
+		"Ship Fuel Settings": {
+		  "type": "separator"
+		},
+		"Enable Refuel": {
+		  "type": "toggle",
+		  "value": true,
+		  "tooltip": "Should ship refuel when landed? (Default: true)"
+		},
+		"Max Fuel": {
+		  "type": "number",
+		  "value": 10000,
+		  "tooltip": "Maximum amount of fuel in your ship. (Default: 10000)"
+		},
+		"Refuel Amount": {
+		  "type": "number",
+		  "value": 0.8,
+		  "tooltip": "Fuel units regenerated per frame. (Default: 0.8)"
+		},
+		"Landing Pad Refuel Multiplier": {
+		  "type": "number",
+		  "value": 5,
+		  "tooltip": "Multiplier of [Refuel Amount] when landed on Timber's Hearth landing pad. (Default: 5)"
+		},
+		"Misc Settings": {
+		  "type": "separator"
+		},
+		"Use Oxygen as Fuel": {
+		  "type": "toggle",
+		  "value": true,
+		  "tooltip": "Should the ship use oxygen as fuel when fuel is depleted? (Default: true)"
+		},
+		"Oxygen as Fuel Multiplier": {
+		  "type": "number",
+		  "value": 1.1,
+		  "tooltip": "Multiplier for oxygen consumption if thrusting with no fuel remaining. (Default: 1.1)"
+		}
+	} 
+}  
