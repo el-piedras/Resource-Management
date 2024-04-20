@@ -536,7 +536,3 @@ public class project1 : ModBehaviour
 		}
 	}
 }
-
-/// To do:
-/// Make functional temperature gauge
-/// Emergency oxygen thrusters [DONE!]
