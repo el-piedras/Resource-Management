@@ -1,4 +1,5 @@
-![image](https://github.com/el-piedras/Resource-Management/assets/134638269/2ba85169-172f-4783-808c-7d607bbf24d5)
+![modthumbnailpng](https://github.com/el-piedras/Resource-Management/assets/134638269/c78b1fa2-f5e6-41ae-b53b-eb6ed451a9e8)
+
 
 # Resource Management
  ## A mod that makes the oxygen and fuel in your ship matter.
