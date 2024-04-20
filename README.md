@@ -27,13 +27,14 @@ Why in the world would you download this? Doesn't matter. I present to you a dir
  ### Oxygen exchange
  Due to some previous accidents, Slate also upgraded your suit, allowing it to give its oxyen to the ship when you buckle up. Don't worry, you'll whatever you gave back once you get off the seat.
 
+ ### Ship Emergency Thrusters
+ Slate has FINALLY finished implementing those emergency thrusters your suit has into your ship. Now, whenever you run out of fuel, your ship will automatically start using oxygen for thrusting. Be aware tho, this design isn't exactly *efficient*, so keep an eye on that gauge and only move when necessary.
+
+ ### Mod Settings
+ Now you can also customize some of Resource Management's parameters to your will! Just head into the Mods tabs in the game settings, click on Resource Management and you'll be able to change some parameters and enable / disable some features.
+
 
 Thats about it for the changes. Have fun!
-
-## Planned:
- I've heard Slate is trying to install those same emergency boosters your suit has that work on oxygen on your ship, but this is some very experimental tech that hasn't left their imagination just yet.
- You'll also be able to customize certain parameters, such as max oxygen, max fuel, certain multipliers, resourse consumption and regeneration, aswell as enabling or desabling some features.
- And just maybe I'll add some functionality to that temperature gauge, at least for cosmetic purposes.
  
 *Any bugs, questions, or suggestions are appreciated and you can contact me on Discord (stonesword_) or leave a comment*
 *Thanks to Xen, JohnCorby, pikpik_carrot, Etherpod, iwantbread, Trifid, viovayo, and the entire Outer Wilds Modding server for their enormous help with this project!*
